@@ -68,6 +68,10 @@ button.normal {
     display: none;
     cursor: pointer;
 }
+
+#close {
+	display: none;
+}
 /* Navagation Bar Styles */
 #navbar {
 	display: flex;
@@ -273,14 +277,86 @@ button.normal {
 	border-bottom-left-radius: 0;
 }
 
+/*footer area */
+footer {
+	padding: 40px 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #f3eedb;
+}
+
+footer .col {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 20px;	
+}
+
+footer .logo {
+	margin-bottom: 30px;
+}
+
+footer h4 {
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+footer p {
+	font-size: 13px;
+	margin: 0 0 8px 0;
+}
+
+footer a {
+	font-size: 13px;
+	text-decoration: none;
+	color: #222;
+	margin-bottom: 10px;
+}
+
+footer .follow {
+	margin-top: 20px;
+}
+
+footer .follow i {
+	color: #465b52;
+	padding-right: 4px;
+	cursor: pointer;
+}
+
+footer .follow i:hover, footer a:hover {
+	color: #F3C969;
+}
+
+footer .copywrite {
+	width: 100%;
+	text-align: center;
+}
+
 /* Responsive Designs - Media */
 
 /* For devices with a max-width of 768px (e.g., tablets) */
 @media (max-width: 768px) {
 	
 	.menu-toggle {
-        display: block;
+        display: flex;
+		align-items:center;
     }
+	
+	.menu-toggle i {
+		color: #0A3900;
+		font-size: 24px;
+		padding-left: 20px;
+	}
+	
+	#close {
+		display: initial;
+		position: flex;
+		top: 30px;
+		left: 30px;
+		color: #222;
+		font-size: 24px;
+	}
 
     #navbar {
         display: none;
@@ -290,8 +366,9 @@ button.normal {
         display: flex;
     }
     #header {
+		height: 12vh;
         padding: 10px 20px;
-        flex-direction: column;
+        flex-direction: center;
     }
 
     #navbar {
@@ -441,4 +518,5 @@ button.normal {
     #newsletter p {
         font-size: 12px;
     }
+	
 }

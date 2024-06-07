@@ -280,8 +280,6 @@ button.normal {
 	
 	.menu-toggle {
         display: block;
-		flex-wrap; wrap;
-		align-content: center-right;
     }
 
     #navbar {
@@ -382,9 +380,27 @@ button.normal {
     }
 
     #welcome {
-        padding: 0 10px;
-    }
+		height: 25vh;
+	}
+	
+	#welcome h4 {
+		font-size: 30px;
+	}
+	
+	#line1 {
+		padding-left: 45px;
+		margin-bottom: 0;
+	}
+	
+	#line2 {
+		margin-top: 0;
+		padding-bottom: 30px;
+	}
 
+	#featured-products h2 {
+		margin-bottom: 0;
+	}
+	
     #featured-products p {
         font-size: 18px;
     }
@@ -396,14 +412,23 @@ button.normal {
     #featured-products .products h4 {
         font-size: 14px;
     }
-
+	
+	#banner {
+		height: 25vh;
+	}
+	
     #banner h4 {
         font-size: 24px;
+		margin-bottom: 0;
     }
 
     #banner h2 {
-        font-size: 36px;
+        font-size: 22px;
     }
+	
+	#banner button.normal {
+		margin-bottom: 20px;
+	}
 
     #newsletter input {
         font-size: 12px;

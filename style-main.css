@@ -280,6 +280,8 @@ button.normal {
 	
 	.menu-toggle {
         display: block;
+		flex-wrap; wrap;
+		align-content: center-right;
     }
 
     #navbar {

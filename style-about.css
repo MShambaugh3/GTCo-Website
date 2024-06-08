@@ -171,7 +171,8 @@ button.normal {
 	border-radius: 15px;
 }
 .profile-img {
-	
+	height: 200px;
+	width: 200px;
 }
 #how-started {
 	text-indent: 10px;

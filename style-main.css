@@ -1,4 +1,22 @@
 /* Global Styles */
+
+/* font styling */
+
+body {
+    font-family: "Urbanist", sans-serif;
+}
+
+.urbanist-bold {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+}
+
+.urbanist-light {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 300;
+}
+
+
 h1 {
   font-size: 50px;
   line-height: 64px;
@@ -91,6 +109,7 @@ button.normal {
 	color: #0A3900;
 }
 #navbar li a:hover, #navbar li a.active {
+	font-weight: 500;
 	color: #B4A77E;
 	transition: 0.3s;
 }
@@ -340,7 +359,7 @@ footer .copywrite {
 /* For devices with a max-width of 768px (e.g., tablets) */
 @media (max-width: 768px) {
 	
-	    #navbar {
+	#navbar {
         position: fixed;
         top: 0;
         left: -100%;
@@ -467,7 +486,7 @@ footer .copywrite {
 	}
 	
 	#line1 {
-		padding-left: 45px;
+		
 		margin-bottom: 0;
 	}
 	

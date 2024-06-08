@@ -155,14 +155,63 @@ button.normal {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: auto;
 }
 #mission-stats .col {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	margin-bottom: 20px;
+	align-items: center;
+	justify-content: center;
+	
+}
+#mission-stats h5 {
+	margin: 0;
+}
+#profile-img {
+	border-radius: 15px;
+}
+#how-started {
+	text-indent: 10px;
+	font-weight: 500;
+	line-height: 25px;
+	width: 450px;
+}
+
+#about1 {
+	margin-bottom: 10px;
+	
+}
+#about2 {
+	margin-bottom: 10px;
+	
+}
+
+#goals-stats {
+	text-indent: 10px;
+	font-weight: 500;
+	line-height: 25px;
+	width: 450px;
 
 }
+.col h5 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+#goals-stats h5 {
+	text-indent: 30px;
+}
+
+#about1 {
+	margin-bottom: 10px;
+	
+}
+#about2 {
+	margin-bottom: 10px;
+	
+}
+
 
 
 /*Banner Box 1 */
@@ -368,7 +417,31 @@ footer .copywrite {
     #who-dat {
         padding: 0 20px;
     }
-
+	
+	#mission-stats {
+		display: center;
+		flex-direction: column;
+		align-items: inline;
+		margin-bottom: 20px;
+	}
+	
+	
+	#how-started {
+		font-size: 20px;
+		text-indent: 10px;
+		font-weight: 500;
+		line-height: 25px;
+		width: 600px;
+	}
+	
+	#goals-stats {
+		font-size: 20px;
+		text-indent: 10px;
+		font-weight: 500;
+		line-height: 25px;
+		width: 600px;
+	}
+	
     .product-container {
         flex-direction: column;
         align-items: center;
@@ -448,6 +521,15 @@ footer .copywrite {
 		padding-bottom: 30px;
 	}
 
+	#mission-stats {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 20px;
+		flex-wrap: wrap;
+		padding: 0 20px 30px 20px;
+	}
+	
 	#who-dat h2 {
 		margin-bottom: 0;
 	}
@@ -463,6 +545,22 @@ footer .copywrite {
     #who-dat .products h4 {
         font-size: 14px;
     }
+	
+	#how-started {
+		font-size: 15px;
+		text-indent: 10px;
+		font-weight: 500;
+		line-height: 25px;
+		width: auto;
+	}
+	
+	#goals-stats {
+		font-size: 15px;
+		text-indent: 10px;
+		font-weight: 500;
+		line-height: 25px;
+		width: auto;
+	}
 	
 	#banner {
 		height: 25vh;

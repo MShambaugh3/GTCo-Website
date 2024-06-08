@@ -130,6 +130,12 @@ button.normal {
 }
 
 /* WHO-Dat Section */
+#who-dat {
+	padding: 20px 80px;
+	padding-bottom: 0;
+	text-align: center;
+	
+}
 #who-dat h2 {
 	font-size: 42px;
 	color: #0a3900;
@@ -141,19 +147,23 @@ button.normal {
 	color: #286C19;
 	font-weight: 700;
 }
-#who-dat {
-	padding: 0 80px;
-	text-align: center;
+
+/* Mission statments */
+#mission-stats {
+	padding: 40px 80px;
+	padding-top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
-#who-dat .col {
+#mission-stats .col {
 	display: flex;
 	flex-direction: column;
-	align-items: flex;
-	margin-bottom: 20px;	
+	align-items: flex-start;
+	margin-bottom: 20px;
+
 }
-#who-dat .col h4{
-	text-align: start;
-}
+
 
 /*Banner Box 1 */
 #banner {

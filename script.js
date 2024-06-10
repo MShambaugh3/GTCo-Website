@@ -3,7 +3,7 @@ async function submitEmail() {
   console.log('Email:', email);
   if (email) {
     try {
-      const response = await fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/YOUR_DEPLOYED_WEB_APP_URL/exec', {
+      const response = await fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwEnWrC8JkJ_6xohe8kpFjw8U3DLNqa-afnNdQK24U_/dev/exec', {
         method: 'POST',
         mode: 'cors',
         headers: {

@@ -3,14 +3,16 @@ async function submitEmail() {
   console.log('Email:', email);
   if (email) {
     try {
-      const response = await fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwEnWrC8JkJ_6xohe8kpFjw8U3DLNqa-afnNdQK24U_/dev/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxLUgQoiFjuXMoBH9RVl6u_qCCYkkshUncsiC5kAFZLdkS3T87vGNym2op8GWBYmuNZyw/exec', {
         method: 'POST',
-        mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ email: email })
       });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const result = await response.json();
       if (result.status === 'success') {
         alert('Email successfully submitted!');
@@ -19,6 +21,7 @@ async function submitEmail() {
         alert('Submission failed. Please try again.');
       }
     } catch (error) {
+      console.error('An error occurred:', error);
       alert('An error occurred. Please try again.');
     }
   } else {

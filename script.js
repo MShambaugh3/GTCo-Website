@@ -3,7 +3,7 @@ async function submitEmail() {
   console.log('Email:', email);
   if (email) {
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxLUgQoiFjuXMoBH9RVl6u_qCCYkkshUncsiC5kAFZLdkS3T87vGNym2op8GWBYmuNZyw/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzmFF14Q_cHjdLk7nyg4K6zywhHoNivBMiRO618T2YWBtled0fWwN63SFe-YUWwjjl_/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -36,8 +36,6 @@ async function submitToGoogleSheets() {
   }
 }
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   var menuToggle = document.getElementById('menu-toggle');
   var navbar = document.getElementById('navbar');
@@ -53,6 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     closeIcon.style.display = 'none';
   });
 
-  // Attach the submitEmail function to the button click event
-  document.querySelector('.normal').addEventListener('click', submitEmail);
+  // Attach the submitToGoogleSheets function to the button click event
+  document.querySelector('.normal').addEventListener('click', submitToGoogleSheets);
 });

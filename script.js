@@ -1,33 +1,41 @@
-async function submitEmail() {
+async function submitToGoogleSheets() {
+  const apiKey = 'AIzaSyAE2726yaa8eZvJcR0GrbE1e9j4D514wtE'; // Replace with your API key
+  const spreadsheetId = '1IN5j2sQv0MzhQc_17cldBws9aeyik8YmvWZm7IB1E74'; // Replace with your spreadsheet ID
+
   const email = document.getElementById('email').value;
-  console.log('Email:', email);
-  if (email) {
-    try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxTPQCSf38mBSAPLkkDuZxiZzZo2lx0I-5YEi0g-CVdZkq3Ho2GBq5V5fpXUTX_isEK/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email: email })
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const result = await response.json();
-      if (result.status === 'success') {
-        alert('Email successfully submitted!');
-        document.getElementById('email').value = ''; // Clear the email field
-      } else {
-        alert('Submission failed. Please try again.');
-      }
-    } catch (error) {
-      console.error('An error occurred:', error);
-      alert('An error occurred. Please try again.');
+  if (!email) {
+    alert('Please enter an email address.');
+    return;
+  }
+
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${1IN5j2sQv0MzhQc_17cldBws9aeyik8YmvWZm7IB1E74}/values/Sheet1!A1:append?valueInputOption=USER_ENTERED&key=${AIzaSyAE2726yaa8eZvJcR0GrbE1e9j4D514wtE}`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        values: [[email]], // Wrap email in an array since it's a single value
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to submit data: ${response.statusText}`);
     }
-  } else {
-    alert('Please enter a valid email address.');
+
+    const result = await response.json();
+    console.log('Data submitted successfully:', result);
+    alert('Email submitted successfully!');
+    // Optionally, clear the input field after successful submission
+    document.getElementById('email').value = '';
+  } catch (error) {
+    console.error('Error submitting data:', error);
+    alert('Failed to submit email. Please try again.');
   }
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
   var menuToggle = document.getElementById('menu-toggle');

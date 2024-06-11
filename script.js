@@ -8,7 +8,7 @@ async function submitToGoogleSheets() {
     return;
   }
 
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${1IN5j2sQv0MzhQc_17cldBws9aeyik8YmvWZm7IB1E74}/values/Sheet1!A1:append?valueInputOption=USER_ENTERED&key=${AIzaSyAE2726yaa8eZvJcR0GrbE1e9j4D514wtE}`;
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/Sheet1!A1:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
 
   try {
     const response = await fetch(url, {
@@ -35,6 +35,7 @@ async function submitToGoogleSheets() {
     alert('Failed to submit email. Please try again.');
   }
 }
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
